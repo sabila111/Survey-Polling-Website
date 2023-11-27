@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/QPBckg2/watercolor-female-avatar.webp",
+      "name": "Ayesha Haq",
+      "rating": 4.5,
+      "shortDescription": "Transformative educational experience! The courses were insightful, the instructors passionate, and the resources comprehensive. I feel more equipped for success than ever before. Thank you for making learning a joyous journey!"
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/SQMhrbK/image-processing20201008-19034-12fe6sm.png",
+      "name": "Nazmul Haq",
+      "rating": 3.8,
+      "shortDescription": "Transformative educational experience! The courses were insightful, the instructors passionate, and the resources comprehensive. I feel more equipped for success than ever before. Thank you for making learning a joyous journey!"
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/gFX31jZ/cute-anime-girl-kawaii-vector-622550-2466.jpg",
+      "name": "Habiba Ahmed",
+      "rating": 5.0,
+      "shortDescription": "Transformative educational experience! The courses were insightful, the instructors passionate, and the resources comprehensive. I feel more equipped for success than ever before. Thank you for making learning a joyous journey!"
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/tsxpnXK/6744f33319119e4db7637ba5b49e5d78.png",
+      "name": "Ali Akbar",
+      "rating": 4.2,
+      "shortDescription":"Transformative educational experience! The courses were insightful, the instructors passionate, and the resources comprehensive. I feel more equipped for success than ever before. Thank you for making learning a joyous journey!"
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/XyKrDDw/319222-1-Iv-I0s1421931178.png",
+      "name": "Mr. Tony",
+      "rating": 4.0,
+      "shortDescription": "Transformative educational experience! The courses were insightful, the instructors passionate, and the resources comprehensive. I feel more equipped for success than ever before. Thank you for making learning a joyous journey!"
+    }
+  ]
+  
