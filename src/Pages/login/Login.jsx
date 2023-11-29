@@ -3,15 +3,16 @@ import { app } from "../../firebase/firebase.config";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Login = () => {
 
     const auth = getAuth(app)
     const Provider = new GoogleAuthProvider
-
+    const axiosPublic = useAxiosPublic()
     const {signIn} =useContext(AuthContext)
-    
+    const navigate = useNavigate();
 
     const [error, setError]= useState('')
 
@@ -19,6 +20,16 @@ const Login = () => {
         signInWithPopup(auth, Provider)
         .then(result =>{
             console.log(result.user)
+            const userInfo ={
+                email: result.user?.email,
+                name: result.user?.displayName
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res => 
+                {
+                    console.log(res.data)
+                    navigate(location?.state? location.state : '/')
+                })
          })
          .catch(error =>{
             console.error(error.message)

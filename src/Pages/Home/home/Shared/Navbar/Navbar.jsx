@@ -18,7 +18,7 @@ const Navbar = () => {
     <li><Link to={'/'}>Home</Link></li>
         <li><Link to='/survey'>All Survey</Link></li>
         <li><Link to='/create'>Create Survey</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li><Link to='/dashboard/cart'>Dashboard</Link></li>
         <li><Link to='/pro'>Pro User</Link></li>
         <li><Link to='/register'>Register</Link></li>
         

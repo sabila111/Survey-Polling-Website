@@ -2,15 +2,19 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useContext, useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 
 const Register = () => {
-
-    const { createUser } = useContext(AuthContext)
+     
+    const axiosPublic = useAxiosPublic()
+    const { createUser,updateUserProfile } = useContext(AuthContext)
+    const navigate = useNavigate();
     const [registerError, setRegisterError] = useState('')
     const [success, setSuccess] = useState('')
+    
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -33,7 +37,24 @@ const Register = () => {
         .then(result => {
          const user= result.user
          console.log(user)
-         toast.success('User Created Successfully')
+         updateUserProfile(name)
+         .then(() => {
+             
+            const userInfo = {
+                name : name,
+                email : email
+            }
+           axiosPublic.post('/users', userInfo)
+           .then(res => {
+            if (res.data.insertedId){
+                console.log('user added to ')
+                toast.success('User Created Successfully')
+            }
+           })
+           navigate('/');
+
+        });
+        
         })
         .catch(error => {
          console.error(error)
