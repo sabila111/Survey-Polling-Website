@@ -12,6 +12,7 @@ import Dashboard from "../Layout/dashboard/Dashboard";
 import Cart from "../Pages/Dashboard/cart/Cart";
 import PrivateRoute from "../private/PrivateRoute";
 import AllUsers from "../Pages/Dashboard/allUsers/AllUsers";
+import ProUser from "../Pages/Dashboard/proUser/ProUser";
 
 
 
@@ -37,10 +38,7 @@ const router = createBrowserRouter([
         element: <AllSurvey></AllSurvey>,
         loader: () => fetch('http://localhost:5000/survey')
       },
-      {
-        path: "/create",
-        element: <CreateSurvey></CreateSurvey>,
-      },
+      
       {
         path: "/details",
         element: <Details></Details>,
@@ -53,8 +51,12 @@ const router = createBrowserRouter([
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
-        path: "cart",
-        element: <Cart></Cart>,
+        path: "create",
+        element: <CreateSurvey></CreateSurvey>,
+      },
+      {
+        path: "pro",
+        element: <ProUser></ProUser>,
       },
       {
         path: "users",

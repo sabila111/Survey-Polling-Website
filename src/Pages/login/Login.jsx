@@ -56,7 +56,7 @@ const Login = () => {
     return (
         <div>
 
-        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/QFcL9Px/beautiful-casual-woman-fashion-set.jpg)' }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/99rMwLH/wave-blue-background-wallpaper-free-vector.jpg)' }}>
             <div className="hero-overlay bg-opacity-50"></div>
             
             <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 ml-60">
@@ -75,11 +75,11 @@ const Login = () => {
                         
                     </div>
                     <div className="form-control mt-6">
-                        <button className="py-3 px-5 rounded-lg text-pink-400 font-bold outline-pink-300 outline-none">Login</button>
+                        <button className="py-3 px-5 rounded-lg text-blue-800 font-bold outline-blue-800 outline-none">Login</button>
                     </div>
                 </form>
 
-                <button onClick={ handleGoogle} className="py-2 px-4 bg-pink-300 rounded-full  items-start mx-auto ml-10 text-white">Google</button>
+                <button onClick={ handleGoogle} className="py-2 px-4 bg-blue-800 rounded-full  items-start mx-auto ml-10 text-white">Google</button>
 
                 {
                     error && <p  className='text-red-500 text-center'>{error}</p>
