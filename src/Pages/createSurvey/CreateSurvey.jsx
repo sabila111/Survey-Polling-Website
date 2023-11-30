@@ -21,7 +21,7 @@ const CreateSurvey = () => {
         const survey = { title, timestamp,option,  category, description }
         console.log(survey)
 
-        fetch('http://localhost:5000/survey', {
+        fetch('https://server-polling-server.vercel.app/survey', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

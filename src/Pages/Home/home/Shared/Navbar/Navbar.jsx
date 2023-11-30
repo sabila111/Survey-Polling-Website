@@ -17,10 +17,11 @@ const Navbar = () => {
     
     <li><Link to={'/'}>Home</Link></li>
         <li><Link to='/survey'>All Survey</Link></li>
-        <li><Link to='/create'>Create Survey</Link></li>
         <li><Link to='/dashboard/create'>Dashboard</Link></li>
         <li><Link to='/dashboard/pro'>Pro User</Link></li>
-        <li><Link to='/register'>Register</Link></li>
+        <li><Link to='/contact'>Contact Us</Link></li>
+        <li><Link to='/help'>Help Center</Link></li>
+      
         
         
     </>

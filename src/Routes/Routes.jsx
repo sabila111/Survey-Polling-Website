@@ -9,10 +9,12 @@ import AllSurvey from "../Pages/allSurvey/AllSurvey";
 import CreateSurvey from "../Pages/createSurvey/CreateSurvey";
 import Details from "../Pages/allSurvey/details/Details";
 import Dashboard from "../Layout/dashboard/Dashboard";
-import Cart from "../Pages/Dashboard/cart/Cart";
 import PrivateRoute from "../private/PrivateRoute";
 import AllUsers from "../Pages/Dashboard/allUsers/AllUsers";
-import ProUser from "../Pages/Dashboard/proUser/ProUser";
+import Info from "../Pages/Dashboard/Info/Info";
+import ContactUs from "../Pages/Home/contact/ContactUs";
+import Help from "../Pages/Home/help/Help";
+
 
 
 
@@ -36,12 +38,20 @@ const router = createBrowserRouter([
       {
         path: "/survey",
         element: <AllSurvey></AllSurvey>,
-        loader: () => fetch('http://localhost:5000/survey')
+        loader: () => fetch('https://server-polling-server.vercel.app/survey')
       },
       
       {
         path: "/details",
         element: <Details></Details>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/help",
+        element: <Help></Help>,
       },
 
     ]
@@ -55,13 +65,14 @@ const router = createBrowserRouter([
         element: <CreateSurvey></CreateSurvey>,
       },
       {
-        path: "pro",
-        element: <ProUser></ProUser>,
-      },
-      {
         path: "users",
         element:<AllUsers></AllUsers>,
       },
+      {
+        path: "surveyInfo",
+        element:<Info></Info>,
+      },
+      
     ],
   },
 ]);

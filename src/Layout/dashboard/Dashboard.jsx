@@ -17,6 +17,13 @@ const Dashboard = () => {
                          
                     <li className="text-white font-bold text-lg"><Link to={'dashboard/create'}>Create Survey</Link></li>
 
+                    <li className="text-white font-bold text-lg">
+                        <Link to={'/dashboard/surveyInfo'}>
+                            
+                            All Surveys Info
+                        </Link>
+                    </li>
+
                          <li className="text-white font-bold text-lg">
                         <Link to={'/dashboard/users'}>
                             

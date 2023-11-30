@@ -6,7 +6,7 @@ import { AuthContext } from "../Pages/provider/AuthProvider";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://server-polling-server.vercel.app'
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate();
